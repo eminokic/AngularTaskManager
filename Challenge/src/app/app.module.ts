@@ -1,10 +1,10 @@
 import { NgModule }      from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
-import { WebRequestService } from "/Users/emin/Desktop/AngularTaskManager/Challenge/src/app/service/WebRequestService";
 
 import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from "./header/header.component";
+import { TaskControllerComponent } from "./task-list/task.component"
 
 /**
  * Main module for our application. If creating any new components, be sure to declare them here.
@@ -18,6 +18,7 @@ import { HeaderComponent } from "./header/header.component";
   declarations: [ 
     HomeComponent,
     HeaderComponent,
+    TaskControllerComponent
   ],
   bootstrap: [
     HomeComponent 

@@ -3,9 +3,14 @@ import { Task } from '/Users/emin/Desktop/AngularTaskManager/Challenge/src/app/m
 import { HttpClient } from '@angular/common/http';
 
 import { WebRequestService} from '/Users/emin/Desktop/AngularTaskManager/Challenge/src/app/service/WebRequestService'
-import { create } from 'domain';
+import { Component } from "@angular/core";
 
-export class TaskController {
+@Component({
+  selector: "task-form",
+  templateUrl: "./task.component.html",
+  styleUrls: ['./task.component.css']
+})
+export class TaskControllerComponent {
   current:Task = null;
   tasks: Array<Task>;
   requests: WebRequestService;
