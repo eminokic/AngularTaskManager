@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Get this thing done",
+      "description": "Finish the thinix challenge to score an interview.",
+      "due": "12/1/2019",
+      "done": false
+    },
+    {
+      "id": 2,
+      "title": "Turn in school project",
+      "description": null,
+      "due": "12/12/2020",
+      "done": false
+    },
+    {
+      "id": 3,
+      "title": "Chistmas party",
+      "description": "Go to friends house, bring food",
+      "due": "12/25/2020",
+      "done": false
+    },
+    {
+      "id": 4,
+      "title": "Watch moon landing",
+      "description": "Look at Buzz go!",
+      "due": "7/20/1969",
+      "done": true
+    }
+  ]
+}
