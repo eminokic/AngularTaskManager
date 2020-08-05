@@ -12,12 +12,19 @@ export class HomeComponent  {
       /* An empty array that is responsible 
        to add a division */
        public items = []; 
+       currentTask = "";
   
        /* A two-way binding performed which 
           pushes text on division */
        public Task; 
      
      
+       handleClick(event: any) {
+           this.currentTask = event.target.value;
+           this.items.push(this.currentTask);
+           this.currentTask = '';
+       }
+
        /* When input is empty, it will 
           not create a new division */
        public addTask() { 
