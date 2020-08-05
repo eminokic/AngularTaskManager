@@ -1,12 +1,13 @@
 import { Component, NgModule, Input } from "@angular/core";
 import { FormsModule } from '@angular/forms'
+import { ITaskService } from '../service/Interfaces/Itask.service';
 
 
 
 @Component({
   selector: "thx-home",
   templateUrl: "./home.component.html",
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent  {
       /* An empty array that is responsible 

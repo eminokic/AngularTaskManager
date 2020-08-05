@@ -16,10 +16,12 @@ import { HeaderComponent } from "./header/header.component";
   ],
   declarations: [ 
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   bootstrap: [
     HomeComponent 
   ]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
