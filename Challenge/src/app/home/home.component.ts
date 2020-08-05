@@ -1,7 +1,6 @@
 import { Component, NgModule, Input } from "@angular/core";
 import { FormsModule } from '@angular/forms'
-import { ITaskService } from '../service/Interfaces/Itask.service';
-
+import { WebRequestService} from '/Users/emin/Desktop/AngularTaskManager/Challenge/src/app/service/WebRequestService'
 
 
 @Component({
@@ -15,9 +14,8 @@ export class HomeComponent  {
        public items = []; 
        currentTask = "";
   
-       /* A two-way binding performed which 
-          pushes text on division */
-       public Task; 
+        public Task;
+        public webReq: WebRequestService; 
      
      
        handleClick(event: any) {
