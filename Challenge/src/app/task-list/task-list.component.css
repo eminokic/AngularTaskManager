@@ -59,3 +59,33 @@ div.validation-error{
   font-size: 30px;
   outline: 5px solid black;
 }
+
+/* Test */
+.task {
+  display: flex;
+  background: linear-gradient(to right,
+  rgb(30, 133, 177) 0%, 
+  rgb(30, 130, 173),
+  rgb(24, 105, 139) 50%,
+  rgb(19, 83, 110) 100%
+  );
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  
+
+  align-items: center;
+}
+
+.task:hover {
+  box-shadow: 0 0 0 5px #eeeeee;
+  background-color: #363636;
+}
+.task.task-text {
+  display: flex;
+  flex-grow: 1;
+}
+.task.task-buttons {
+    opacity: 1;
+    transform: scale(1);
+}
