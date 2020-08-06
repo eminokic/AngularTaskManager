@@ -34,5 +34,5 @@ import { TaskListComponent } from './task-list/task-list.component';
     HomeComponent 
   ]
 })
-export class AppModule { 
+export default class AppModule { 
 }
