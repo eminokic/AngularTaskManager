@@ -32,7 +32,7 @@ import { TaskListComponent } from './task-list/task-list.component';
   ],
   bootstrap: [
     HomeComponent 
-  ]
+  ],
 })
 export default class AppModule { 
 }

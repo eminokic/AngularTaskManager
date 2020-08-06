@@ -13,27 +13,6 @@
       "description": null,
       "due": "12/12/2020",
       "done": false
-    },
-    {
-      "id": 3,
-      "title": "Chistmas party",
-      "description": "Go to friends house, bring food",
-      "due": "12/25/2020",
-      "done": false
-    },
-    {
-      "id": 4,
-      "title": "Watch moon landing",
-      "description": "Look at Buzz go!",
-      "due": "7/20/1969",
-      "done": true
-    },
-    {
-      "id": 5,
-      "title": "test post",
-      "description": "little steps big progress",
-      "due": "08/06/2020",
-      "done": false
     }
   ]
 }

@@ -1,23 +1,30 @@
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 <div class="jumbotron">
   <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
     <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
     <div class="form-group">
       <label>Title</label>
-      <input name="Title" #FullName="ngModel" [(ngModel)]="service.formData.title" required minlength="2" class="form-control" required>
+      <input name="Title" #Title="ngModel" [(ngModel)]="service.formData.title" required minlength="2" class="form-control" required>
       <div class="validation-error" *ngIf="service.formData.title.length == 0 ">This field is required.</div>
     </div>
     <div class="form-group">
       <label>Description</label>
-      <input name="Description" #Position="ngModel" [(ngModel)]="service.formData.description" class="form-control">
+      <input name="Description" #Description="ngModel" [(ngModel)]="service.formData.description" class="form-control">
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label>Due Date</label>
-        <input name="Due" #EMPCode="ngModel" [(ngModel)]="service.formData.due" class="form-control">
+        <input name="Due" #Due="ngModel" [(ngModel)]="service.formData.due" class="form-control">
       </div>
       <div class="form-group  col-md-6">
         <label>Done</label>
-        <input name="Done" #Mobile="ngModel" [(ngModel)]="service.formData.done" class="form-control">
+        <div></div>
+        <label class="switch" #Done="ngModel" [(ngModel)]="service.formData.done">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
       </div>
       
     </div>
