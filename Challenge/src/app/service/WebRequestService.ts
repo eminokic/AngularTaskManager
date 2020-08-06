@@ -38,7 +38,7 @@ export class WebRequestService {
    }
 
   deleteTask(id: number) {
-    return this.http.delete(`${this.ROOT_URL}+'/tasks`+id);
+    return this.http.delete(`${this.ROOT_URL}/tasks/`+id);
   }
 
 }
