@@ -1,5 +1,5 @@
 import { Observable } from "rxjs/Observable";
-import { Task } from "../../models/task";
+import { Task } from "../models/task";
 
 
 /**
