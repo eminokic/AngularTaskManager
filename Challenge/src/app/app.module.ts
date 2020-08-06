@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TaskListComponent } from './task-list/task-list.component';
+import { ToggleButtonComponent } from './views/toggle-button/toggle-button.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 
 /**
  * Main module for our application. If creating any new components, be sure to declare them here.
@@ -23,12 +26,15 @@ import { TaskListComponent } from './task-list/task-list.component';
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+    MatButtonToggleModule,
+    MatButtonToggleGroup,
   ],
   declarations: [ 
     HomeComponent,
     HeaderComponent,
     TaskControllerComponent,
-    TaskListComponent
+    TaskListComponent,
+    ToggleButtonComponent
   ],
   bootstrap: [
     HomeComponent 

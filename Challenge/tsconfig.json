@@ -20,7 +20,8 @@
     ],
     "module": "esnext",
     "baseUrl": "./"
-  },
+  }
+,
   "files": [
     "src/main.ts"
   ],
