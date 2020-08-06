@@ -1,5 +1,58 @@
 @import '~ngx-toastr/toastr';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+.container {
+  background: linear-gradient(to right,
+  #2c76ff 0%, 
+  #1750a5 50%, 
+  #123d7e 50%,
+  #0a2e64 100%
+  );
+}
+.jumbotron{
+  background-color: #fff;
+  padding-top: 32px;
+}
+
+div.first.div
+{
+  background-color: #4b647b;
+  width:105%;
+  max-width: 1920px;
+  min-width: 480px;
+  height: 200px;
+  margin-left: -8px;
+  overflow: hidden;
+}
+
+.img
+{
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.83;
+  width: 480px;
+}
+.img:hover
+{
+  opacity: 1;
+}
+.spacing
+{
+  width: 200px;
+}
+.Expanding
+{
+  transition: width 0.3s ease-in-out;
+  -webkit-transition:width 0.3 ease-in-out;
+  width: fit-content;
+  height: 120px;
+  background-color: #363636;
+}
+.Expanding:hover
+{
+  width: 300px;
+  height: 120px;
+  background-color: #363636;
+}
 
 .form-group>input{
   font-weight: bolder;

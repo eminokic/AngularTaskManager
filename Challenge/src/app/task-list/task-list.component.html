@@ -1,8 +1,10 @@
-<table class="table table-hover">
-  <tr *ngFor="let tasks of service.list">
-    <td (click)="populateForm(tasks)">[{{tasks.id}}]-{{tasks.title}}</td>
-    <td (click)="populateForm(tasks)">{{tasks.description}}</td>
-    <td (click)="populateForm(tasks)">{{tasks.done}}</td>
-    <td><button (click)="onDelete(tasks.id)" class="btn btn-sm btn-outline-danger">X</button></td>
-  </tr>
-</table>
+<div class="jumbotron">
+    <table class="table table-hover">
+        <tr *ngFor="let tasks of service.list">
+          <div class="Expanding">
+              <td (click)="populateForm(tasks)">[{{tasks.id}}]-{{tasks.title}}</td>
+              <td><button (click)="onDelete(tasks.id)" class="btn btn-sm btn-outline-danger">X</button></td>
+          </div>
+        </tr>
+      </table>
+</div>
