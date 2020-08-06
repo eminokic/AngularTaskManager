@@ -20,7 +20,7 @@ export class TaskControllerComponent implements OnInit {
   requests: WebRequestService;
   private http: HttpClient
 
-  constructor(private toastr: ToastrService, private service: WebRequestService) {
+  constructor(private toastr: ToastrService, public service: WebRequestService) {
 
   }
   ngOnInit(): void {
