@@ -7,13 +7,7 @@ export class Task implements ITask {
   due?: string;
   done: boolean;
 
-  constructor(id: number, title: string, done: boolean, description?: string, due?: string){
-    this.id = id;
-    this.title = title;
-    this.description = description;
-    this.due = due;
-    this.done = done;
-  }
+  constructor(){ }
 
 
 }
