@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 
 import { ToastrService } from "ngx-toastr";
 
+
 @Component({
   selector: "task-form",
   templateUrl: "./task.component.html",
@@ -56,26 +57,26 @@ export class TaskControllerComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    if (form.value.EmployeeID == null)
+    if (form.value.id == null)
       this.insertRecord(form);
     else
       this.updateRecord(form);
   }
   insertRecord(form: NgForm) {
     this.service.postTask(form.value).subscribe(res => {
-      this.toastr.success('Inserted successfully', 'EMP. Register');
+      this.toastr.success('Inserted successfully', 'Task: Registered');
       this.resetForm(form);
       this.service.refreshList();
     });
   }
 
   updateRecord(form: NgForm) {
-    this.service.putEmployee(form.value).subscribe(res => {
-      this.toastr.info('Updated successfully', 'EMP. Register');
+    this.service.putTask(form.value).subscribe(res => {
+      this.toastr.info('Updated successfully', 'Task: Update');
       this.resetForm(form);
       this.service.refreshList();
     });
 
   }
-
+  
 }

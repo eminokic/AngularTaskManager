@@ -1,6 +1,31 @@
 @import '~ngx-toastr/toastr';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 
+.container 
+{
+  background-color: #fff;
+  padding-top: 32px;
+}
+.Expanding
+{
+  transition: width 0.3s ease-in-out;
+  -webkit-transition:width 0.3 ease-in-out;
+  width: fit-content;
+  height: 120px;
+  background: linear-gradient(to right,
+  rgb(30, 133, 177) 0%, 
+  rgb(30, 130, 173),
+  rgb(24, 105, 139) 50%,
+  rgb(19, 83, 110) 100%
+  );
+}
+.Expanding:hover
+{
+  width: 300px;
+  height: 120px;
+  background-color: #363636;
+}
+
 .form-group>input{
   font-weight: bolder;
 }
@@ -13,11 +38,6 @@ button[type="submit"]{
   color: #fff;
 
 }
-.jumbotron{
-  background-color: #fff;
-  padding-top: 32px;
-}
-
 table tr:hover{
   cursor: pointer;
 }
@@ -30,4 +50,43 @@ div.validation-error{
   margin-top: .25rem;
   font-size: 80%;
   color: #dc3545;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background-color: #1B779E;
+  color: white;
+  font-size: 30px;
+  outline: 5px solid black;
+}
+
+/* Test */
+.task {
+  display: flex;
+  background: linear-gradient(to right,
+  rgb(30, 133, 177) 0%, 
+  rgb(30, 130, 173),
+  rgb(24, 105, 139) 50%,
+  rgb(19, 83, 110) 100%
+  );
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  
+
+  align-items: center;
+}
+
+.task:hover {
+  box-shadow: 0 0 0 5px #eeeeee;
+  background-color: #363636;
+}
+.task.task-text {
+  display: flex;
+  flex-grow: 1;
+}
+.task.task-buttons {
+    opacity: 1;
+    transform: scale(1);
 }
