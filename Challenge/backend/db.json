@@ -2,23 +2,35 @@
   "tasks": [
     {
       "id": 1,
-      "title": "Get this thing done",
-      "description": "Finish the thinix challenge to score an interview.",
-      "due": "12/1/2019",
-      "done": false
+      "Title": "Test",
+      "Description": "test to see if done button updates correctly",
+      "Due": "08/08/2020"
     },
     {
       "id": 2,
-      "title": "Turn in school project",
-      "description": null,
-      "due": "12/12/2020",
-      "done": false
+      "Title": "Turn in school project",
+      "Description": null,
+      "Due": "12/12/2020"
     },
     {
       "id": 3,
       "Title": "Make better UI",
       "Description": "make better UI",
       "Due": "08/07/2020"
+    },
+    {
+      "id": 4,
+      "Title": "Done or Not Test",
+      "Description": "test",
+      "Due": "08/08/2020",
+      "Done": true
+    },
+    {
+      "id": 5,
+      "Title": "",
+      "Description": "",
+      "Due": "",
+      "Done": false
     }
   ]
 }

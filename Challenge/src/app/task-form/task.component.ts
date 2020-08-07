@@ -57,7 +57,7 @@ export class TaskControllerComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    if (form.value.EmployeeID == null)
+    if (form.value.id == null)
       this.insertRecord(form);
     else
       this.updateRecord(form);
@@ -71,12 +71,13 @@ export class TaskControllerComponent implements OnInit {
   }
 
   updateRecord(form: NgForm) {
-    this.service.putEmployee(form.value).subscribe(res => {
-      this.toastr.info('Updated successfully', 'EMP. Register');
+    this.service.putTask(form.value).subscribe(res => {
+      this.toastr.info('Updated successfully');
       this.resetForm(form);
       this.service.refreshList();
     });
 
   }
 
+  
 }

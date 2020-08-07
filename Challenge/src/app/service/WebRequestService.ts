@@ -32,7 +32,7 @@ export class WebRequestService {
   patch(uri: string, payload: Object) {
     return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);
   }
-  putEmployee(formData : Task){
+  putTask(formData : Task){
     return this.http.put(this.ROOT_URL+'/tasks/'+formData.id,formData);
      
    }
@@ -40,5 +40,4 @@ export class WebRequestService {
   deleteTask(id: number) {
     return this.http.delete(`${this.ROOT_URL}/tasks/`+id);
   }
-
 }

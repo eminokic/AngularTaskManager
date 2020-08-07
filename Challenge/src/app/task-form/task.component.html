@@ -21,8 +21,9 @@
       <div class="form-group  col-md-6">
         <label>Done</label>
         <div></div>
-        <label class="switch" #Done="ngModel" [(ngModel)]="service.formData.done">
-            <input type="checkbox">
+        <label class="switch">
+            <input type="checkbox" name="Done" #id="ngModel" [(ngModel)]="service.formData.done" 
+            onclick="service.formData.done = !(service.formData.done)">
             <span class="slider"></span>
           </label>
       </div>
