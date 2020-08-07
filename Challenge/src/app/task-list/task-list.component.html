@@ -6,7 +6,10 @@
     <table class="table table-hover">
         <tr *ngFor="let tasks of service.list">
           <div class="task">
-              <td (click)="populateForm(tasks)">[{{tasks.id}}] || {{tasks.title}}
+              <td (click)="populateForm(tasks)">
+                <div class="task">
+                    [{{tasks.id}}]-{{tasks.title}}
+                </div>
               </td>
               <td><button (click)="onDelete(tasks.id)" class="btn btn-sm btn-outline-danger">X</button></td>
           </div>

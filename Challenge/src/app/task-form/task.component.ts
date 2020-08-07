@@ -64,7 +64,7 @@ export class TaskControllerComponent implements OnInit {
   }
   insertRecord(form: NgForm) {
     this.service.postTask(form.value).subscribe(res => {
-      this.toastr.success('Inserted successfully', 'EMP. Register');
+      this.toastr.success('Inserted successfully', 'Task: Registered');
       this.resetForm(form);
       this.service.refreshList();
     });
@@ -72,12 +72,11 @@ export class TaskControllerComponent implements OnInit {
 
   updateRecord(form: NgForm) {
     this.service.putTask(form.value).subscribe(res => {
-      this.toastr.info('Updated successfully');
+      this.toastr.info('Updated successfully', 'Task: Update');
       this.resetForm(form);
       this.service.refreshList();
     });
 
   }
-
   
 }
