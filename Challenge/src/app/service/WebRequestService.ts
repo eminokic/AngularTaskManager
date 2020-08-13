@@ -15,10 +15,6 @@ export class WebRequestService {
 
   }
 
-  get(uri: string) {
-    return this.http.get(`${this.ROOT_URL}/${uri}`);
-  }
-
   postTask(formData : Task) {
     return this.http.post(`${this.ROOT_URL}/tasks`, formData, {observe: 'response'});
   }
