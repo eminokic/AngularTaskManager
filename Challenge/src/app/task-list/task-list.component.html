@@ -4,11 +4,11 @@
     <h1 class="title">Todo</h1>
 
     <div class="all-tasks">
-      <h2 class="task-list-title">My lists</h2>
+      <h2 class="task-list-title">Filters</h2>
       <ul class="task-list">
-        <li class="list-name active-list">Youtube</li>
-        <li class="list-name">Work</li>
-        <li class="list-name">Grocery</li>
+        <li class="list-name active-list">All</li>
+        <li class="list-name">Not Done</li>
+        <li class="list-name">Done</li>
       </ul>
 
       <form action="">
@@ -29,42 +29,17 @@
       </div>
 
       <div class="todo-body">
-        <div class="tasks">
+        <div class="tasks" *ngFor="let task of service.list">
           <div class="task">
             <input 
               type="checkbox"
-              id="task-1"
+              id="service.formData.id"
             />
-            <label for="task-1">
+            <label for="service.formData.id">
               <span class="custom-checkbox"></span>
-              record todo list video
+              tasks
             </label>
           </div>
-          <!-- /task-1 -->
-
-          <div class="task">
-              <input 
-                type="checkbox"
-                id="task-2"
-              />
-              <label for="task-2">
-                <span class="custom-checkbox"></span>
-                another task
-              </label>
-            </div>
-            <!-- /task-2 -->
-
-            <div class="task">
-                <input 
-                  type="checkbox"
-                  id="task-3"
-                />
-                <label for="task-3">
-                  <span class="custom-checkbox"></span>
-                  a third task
-                </label>
-              </div>
-              <!-- /task-3 -->
         </div>
 
         <div class="new-task-creator">
@@ -78,10 +53,9 @@
                 <button class="btn create" aria-label="create new task">+</button>
               </form>
         </div>
-
         <div class="delete-stuff">
-          <button class="btn delete">Clear completed tasks</button>
-          <button class="btn delete">Delete list</button>
+          <button class="btn delete" (click)="onDelete(tasks.id)">Clear Completed Tasks</button>
+          <button class="btn delete" (click)="onDelete(tasks.id)">Clear All Tasks</button>
         </div>
       </div>
     </div>
