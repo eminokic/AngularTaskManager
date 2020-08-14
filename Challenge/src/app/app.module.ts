@@ -9,7 +9,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TaskListComponent } from './task-list/task-list.component';
+import {TaskListComponent} from './task-list/task-list.component';
+import { AccordionComponent } from './accordion/accordion.component'
+import { AccordionItemComponent } from './accordion/accordion-item.component'
 
 /**
  * Main module for our application. If creating any new components, be sure to declare them here.
@@ -28,7 +30,10 @@ import { TaskListComponent } from './task-list/task-list.component';
     HomeComponent,
     HeaderComponent,
     TaskControllerComponent,
-    TaskListComponent
+    TaskListComponent,
+    AccordionItemComponent,
+    AccordionComponent
+    
   ],
   bootstrap: [
     HomeComponent 

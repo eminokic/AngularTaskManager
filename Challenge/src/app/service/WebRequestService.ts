@@ -1,6 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Task } from '/Users/emin/Desktop/AngularTaskManager/Challenge/src/app/models/task';
+import { ITask } from '../models/interfaces/Itask';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +40,12 @@ export class WebRequestService {
       .toPromise().then(res => this.notDone = res as Task[]);
     }
   }
-
+  getTasks(formData : Task): Observable<Task> {
+    return this.http.get<Task>(this.ROOT_URL+'/tasks');
+  }
+  getTitle(formData:Task) {
+    return this.http.get<Task>(this.ROOT_URL+'/tasks/'+formData.title);
+  }
   patch(uri: string, payload: Object) {
     return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);
   }

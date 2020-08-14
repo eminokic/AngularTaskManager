@@ -272,3 +272,11 @@ form {
   bottom: -35px;
   color: var(--clr-light);
 }
+
+.headerTitle {
+  overflow-wrap: break-word;
+  overflow: auto;
+  width: 100%;
+
+  font-weight: 600;
+}

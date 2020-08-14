@@ -29,8 +29,8 @@
       </div>
 
       <div class="todo-body">
-        <div class="tasks" *ngFor="let task of service.list">
-          <div class="task">
+        <div class="tasks" *ngFor="let task of service.list" data-toggle="collapse">
+          <div class="task" data-toggle="collapse">
             <input 
               type="checkbox"
               id="service.formData.id"
@@ -53,6 +53,8 @@
                 <button class="btn create" aria-label="create new task">+</button>
               </form>
         </div>
+
+        
         <div class="delete-stuff">
           <button class="btn delete" (click)="onDelete(tasks.id)">Clear Completed Tasks</button>
           <button class="btn delete" (click)="onDelete(tasks.id)">Clear All Tasks</button>
@@ -61,3 +63,13 @@
     </div>
   </body>
 </div>
+
+<div class="card">
+    <div>Todo</div>
+    <a *ngFor="let task of service.list">
+    <app-accordion>
+      <app-accordion-item title=getTitle(task)>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat dolores, voluptates atque error quisquam doloremque veniam excepturi, expedita quaerat eveniet vitae, explicabo qui reprehenderit optio odit quibusdam veritatis eaque.</app-accordion-item>
+      
+    </app-accordion>
+  </a>
+  </div>
