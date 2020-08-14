@@ -1,10 +1,21 @@
-<div class="container">
-    <div class="header">
-        <h1>Tasks</h1>
-        <p>Getting it done</p>
-    </div>
-    <table class="table table-hover">
-        <tr *ngFor="let tasks of service.list">
+<section class="container">
+  <div class="left-half">
+    <article>
+      <table class="table table-hover">
+        <tr *ngFor="let tasks of service.done">
+          <div class="article">
+              <td (click)="populateForm(tasks)">[{{tasks.id}}] || {{tasks.title}}
+              </td>
+              <td><button (click)="onDelete(tasks.id)" class="btn btn-sm btn-outline-danger">X</button></td>
+          </div>
+        </tr>
+      </table>
+    </article>
+  </div>
+  <div class="right-half">
+    <article>
+      <table class="table table-hover">
+        <tr *ngFor="let tasks of service.notDone">
           <div class="task">
               <td (click)="populateForm(tasks)">[{{tasks.id}}] || {{tasks.title}}
               </td>
@@ -12,4 +23,6 @@
           </div>
         </tr>
       </table>
-</div>
+    </article>
+  </div>
+</section>

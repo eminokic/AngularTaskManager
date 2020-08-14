@@ -9,7 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TaskListComponent } from '/Users/emin/Desktop/Safe/Challenge/src/app/task-list/task-list.component';
+import { TaskListComponent } from './task-list/task-list.component';
 
 /**
  * Main module for our application. If creating any new components, be sure to declare them here.

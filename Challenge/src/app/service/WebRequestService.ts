@@ -10,6 +10,8 @@ export class WebRequestService {
   readonly ROOT_URL = 'http://localhost:3000';
   formData : Task;
   list : Task[];
+  done: Task[];
+  notDone: Task[];
 
   constructor(private http: HttpClient) {
 
@@ -23,6 +25,18 @@ export class WebRequestService {
   refreshList(){
     this.http.get(this.ROOT_URL+'/tasks')
     .toPromise().then(res => this.list = res as Task[]);
+  }
+  refreshDoneList(){
+    if(this.formData.done == true) {
+      this.http.get(this.ROOT_URL+'/tasks')
+      .toPromise().then(res => this.done= res as Task[]);
+    }
+  }
+  refreshNotDoneList(){
+    if(this.formData.done != true) {
+      this.http.get(this.ROOT_URL+'/tasks')
+      .toPromise().then(res => this.notDone = res as Task[]);
+    }
   }
 
   patch(uri: string, payload: Object) {
