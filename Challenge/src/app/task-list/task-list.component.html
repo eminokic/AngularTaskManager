@@ -66,10 +66,8 @@
 
 <div class="card">
     <div>Todo</div>
-    <a *ngFor="let task of service.list">
-    <app-accordion>
-      <app-accordion-item title=getTitle(task)>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat dolores, voluptates atque error quisquam doloremque veniam excepturi, expedita quaerat eveniet vitae, explicabo qui reprehenderit optio odit quibusdam veritatis eaque.</app-accordion-item>
+    <app-accordion *ngFor="let formData of service.list">
+      <app-accordion-item [(ngModel)]="service.formData" title={{this.service.formData.title}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat dolores, voluptates atque error quisquam doloremque veniam excepturi, expedita quaerat eveniet vitae, explicabo qui reprehenderit optio odit quibusdam veritatis eaque.</app-accordion-item>
       
     </app-accordion>
-  </a>
   </div>

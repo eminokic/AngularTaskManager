@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Task } from '../models/task';
+import { WebRequestService } from '../service/WebRequestService';
 
 @Component({
   selector: 'app-accordion-item',
@@ -35,7 +36,6 @@ export class AccordionItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
   toggle() {
     this.showBody = !this.showBody;
   }
