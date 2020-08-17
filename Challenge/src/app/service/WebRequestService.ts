@@ -1,23 +1,19 @@
-import { Injectable, Input, OnInit } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Task } from '/Users/emin/Desktop/AngularTaskManager/Challenge/src/app/models/task';
 import { ITask } from '../models/interfaces/Itask';
 import { Observable } from 'rxjs';
-import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WebRequestService implements OnInit {
-  
-  ngOnInit(): void {
-    this.resetForm();
-  }
+export class WebRequestService {
 
   readonly ROOT_URL = 'http://localhost:3000';
   formData : Task;
   list : Task[];
-  taskList = JSON.stringify(this.list);
+  done: Task[];
+  notDone: Task[];
 
   constructor(private http: HttpClient) {
 
@@ -26,27 +22,29 @@ export class WebRequestService implements OnInit {
   postTask(formData : Task) {
     return this.http.post(`${this.ROOT_URL}/tasks`, formData, {observe: 'response'});
   }
-  resetForm() {
-    if (this.formData != null)
-      this.resetForm();
-    this.formData = {
-      id: null,
-      title: '',
-      description: '',
-      due: '',
-      done: false
-    }
-  }
+  
 
   refreshList(){
     this.http.get(this.ROOT_URL+'/tasks')
     .toPromise().then(res => this.list = res as Task[]);
   }
-  getTasks(formData : Task): Observable<Task> {
-    return this.http.get<Task>(this.ROOT_URL+'/tasks');
+  refreshDoneList(){
+    if(this.formData.done == true) {
+      this.http.get(this.ROOT_URL+'/tasks')
+      .toPromise().then(res => this.done= res as Task[]);
+    }
+  }
+  refreshNotDoneList(){
+    if(this.formData.done != true) {
+      this.http.get(this.ROOT_URL+'/tasks')
+      .toPromise().then(res => this.notDone = res as Task[]);
+    }
+  }
+  getTasks(): Observable<any> {
+    return this.http.get<any>(this.ROOT_URL+'/tasks');
   }
   getTitle(formData:Task) {
-    return this.http.get(this.ROOT_URL+'/tasks/'+formData.title);
+    return this.http.get<Task>(this.ROOT_URL+'/tasks/'+formData.title);
   }
   patch(uri: string, payload: Object) {
     return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);
