@@ -1,7 +1,8 @@
   @import url("https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css");
 
 .acc-header {
-    border-bottom: 1px solid rgb(202, 202, 202);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background-color: #2196F3;
     min-height: 30px;
     cursor: pointer;
     display: flex;
@@ -14,7 +15,7 @@
     overflow-wrap: break-word;
     overflow: auto;
     width: 100%;
-
+    
     font-weight: 600;
 }
 

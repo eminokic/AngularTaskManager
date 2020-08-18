@@ -32,7 +32,7 @@ export class AccordionItemComponent implements OnInit {
   @Input() title: string;
   showBody = false;
 
-  constructor() { }
+  constructor(public service:WebRequestService) { }
 
   ngOnInit() {
   }

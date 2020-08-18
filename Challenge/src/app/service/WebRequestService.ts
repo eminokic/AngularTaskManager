@@ -1,4 +1,4 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Task } from '/Users/emin/Desktop/AngularTaskManager/Challenge/src/app/models/task';
 import { ITask } from '../models/interfaces/Itask';
@@ -41,10 +41,7 @@ export class WebRequestService {
     }
   }
   getTasks(): Observable<any> {
-    return this.http.get<any>(this.ROOT_URL+'/tasks');
-  }
-  getTitle(formData:Task) {
-    return this.http.get<Task>(this.ROOT_URL+'/tasks/'+formData.title);
+    return this.http.get(this.ROOT_URL+'/tasks'+this.formData);
   }
   patch(uri: string, payload: Object) {
     return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);

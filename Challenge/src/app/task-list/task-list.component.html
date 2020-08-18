@@ -1,7 +1,6 @@
 <div class="container">
 
   <body>
-    <h1 class="title">Todo</h1>
 
     <div class="all-tasks">
       <h2 class="task-list-title">Filters</h2>
@@ -27,49 +26,20 @@
         <h2 class="list-title">Objectives</h2>
         <p class="task-count" [(ngModel)]="service.list">{{service.list.length}} tasks remaining</p>
       </div>
-
-      <div class="todo-body">
-        <div class="tasks" *ngFor="let task of service.list" data-toggle="collapse">
-          <div class="task" data-toggle="collapse">
-            <input 
-              type="checkbox"
-              id="service.formData.id"
-            />
-            <label for="service.formData.id">
-              <span class="custom-checkbox"></span>
-              tasks
-            </label>
-          </div>
-        </div>
-
-        <div class="new-task-creator">
-            <form action="">
-                <input 
-                  type="text"
-                  class="new task"
-                  placeholder="new task name"
-                  aria-label="new task name"
-                />
-                <button class="btn create" aria-label="create new task">+</button>
-              </form>
-        </div>
+      
+      <div class="card">
+        <app-accordion data-toggle="collapse">
+          <app-accordion-item  *ngFor="let task of service.list" title="{{task.id}} - {{task.title}}" data-toggle="collapse">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat dolores, voluptates atque error quisquam doloremque veniam excepturi, expedita quaerat eveniet vitae, explicabo qui reprehenderit optio odit quibusdam veritatis eaque.</app-accordion-item>
+        </app-accordion>
+      </div>
+      <app-accordion-item title="+"><task-form></task-form></app-accordion-item>
 
         
         <div class="delete-stuff">
-          <button class="btn delete" (click)="onDelete(tasks.id)">Clear Completed Tasks</button>
-          <button class="btn delete" (click)="onDelete(tasks.id)">Clear All Tasks</button>
+          <button class="btn delete" (click)="onDelete(service.formData.id)">Clear Completed Tasks</button>
+          <button class="btn delete" (click)="onDelete(service.formData.id)">Clear All Tasks</button>
         </div>
       </div>
-    </div>
   </body>
 </div>
-
-<div class="card">
-    <div class="headerTitle">Todo</div>
-    <a *ngFor="let task of service.list">
-    <app-accordion>
-      <app-accordion-item  *ngFor="let task of service.list" title=#task.title>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat dolores, voluptates atque error quisquam doloremque veniam excepturi, expedita quaerat eveniet vitae, explicabo qui reprehenderit optio odit quibusdam veritatis eaque.</app-accordion-item>
-      
-    </app-accordion>
-  </a>
-  </div>

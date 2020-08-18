@@ -154,7 +154,9 @@ form {
 
 .todo-header {
   padding: var(--spacer);
-  background: #e4e4e4;
+  background: #4274d1;
+  border-color: #000000;
+  border: 5px solid currentColor;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -277,6 +279,5 @@ form {
   overflow-wrap: break-word;
   overflow: auto;
   width: 100%;
-
   font-weight: 600;
 }
