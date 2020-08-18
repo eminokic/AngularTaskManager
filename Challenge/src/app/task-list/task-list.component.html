@@ -28,12 +28,15 @@
       </div>
       
       <div class="card">
-        <app-accordion data-toggle="collapse">
-          <app-accordion-item  *ngFor="let task of service.list" title="{{task.id}} - {{task.title}}" data-toggle="collapse">
+        <app-accordion *ngFor="let task of service.list" data-toggle="collapse">
+          <app-accordion-item title="{{task.id}}" data-toggle="collapse"> 
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat dolores, voluptates atque error quisquam doloremque veniam excepturi, expedita quaerat eveniet vitae, explicabo qui reprehenderit optio odit quibusdam veritatis eaque.</app-accordion-item>
         </app-accordion>
       </div>
       <app-accordion-item title="+"><task-form></task-form></app-accordion-item>
+      <button class="btn delete" (click)="onDelete(service.formData.id)">Clear Completed Tasks</button>
+      <div></div>
+      <button class="btn delete" (click)="onDelete(service.formData.id)">Clear All Tasks</button>
 
         
         <div class="delete-stuff">

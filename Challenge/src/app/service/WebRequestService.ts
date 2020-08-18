@@ -40,8 +40,8 @@ export class WebRequestService {
       .toPromise().then(res => this.notDone = res as Task[]);
     }
   }
-  getTasks(): Observable<any> {
-    return this.http.get(this.ROOT_URL+'/tasks'+this.formData);
+  getTasks(formData: Task): Observable<any> {
+    return this.http.get(this.ROOT_URL+'/tasks/'+formData.id);
   }
   patch(uri: string, payload: Object) {
     return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);
